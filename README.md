@@ -74,15 +74,14 @@ The subsystems calls happen mostly via the function library `UCL_WAdmin`.
 ![Image](/Resources/MT_SubsystemCalls.png)  
 
 
-
 ## Ticking Groups
 
 A Ticking Group has the following options:  
 
-- A Developer Name. Used for Debugging and `By Name` Query Functions (check below).  
+- A Developer Name. Used for Debugging and `By Name` Query Functions (check subsystem calls).  
 - Ticking Settings, such as enable toggle.  
 - Ticking Settings, such as whether the group can tick while the game world is in paused state.  
-- Ticking Automatic Settings. This determines whether our system automatically manages this ticking group or whether the project developer manually ticks this group (check below).  
+- Ticking Automatic Settings. This determines whether our system automatically manages this ticking group or whether the project developer manually ticks this group (check subsystem calls).  
 - Ticks on Server or Client. whether the client or server are allowed this group to be ticked.  
 - Tick Rate - How often should this group tick whenever it is an automatically managed group. 0 means tick every frame.  
 
@@ -115,7 +114,18 @@ The Set up is simple. Implement the `IC_WAdmin_Tick` interface on any object tha
 
 ![Image](/Resources/MT_InterfaceSetting.png)  
 
-That's All by and large.  
+You use the subsystem calls `Add Object` and `Remove Object` as well as `Set Object Tick` for managing the objects. For registering, you have the `Ticking Object Setting` struct:  
+
+```cpp
+/** Whether the object gets registered with ticking enabled.*/
+bool bCanTickOnAddition = true;
+
+/** What ticking group do we register to.*/
+int32 TickingGroup;
+
+/** When this value != None, we take priority on this over TickingGroup Index. */
+FName TickingGroupName
+```
 
 ### How it Works - CPP implementation  
 
