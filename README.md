@@ -8,6 +8,20 @@ The Concept of Mono Tick is simple. The Engine's ticking process is very capable
 
 On Projects with a very large number of ticking objects, this can result in significant performance gains. Keep in mind that your mileage may vary, and results will depend on the nature of the ticking objects, native (C++) vs blueprint ticking, frequencies, build targets, amongst others.  
 
+
+----
+
+## Update Important Aspects
+
+A lot of the previous flow with working with Mono Tick v1 and v1.1 has changed. Upon updating an existing project, you may get several compiling errors on your implementations. Here are the general notion of what's changed:  
+
+* The previous six ticking groups by priority don't exist anymore in the same way they used to. Previously, the 6 groups ticked in order via the global tick() function call. Now, it is managed by the project settings, where the user can specify how the ticking groups behave. The Order of group declaration and addition still matters. Any two groups that tick in the same frame will still depend on addition order, so if you do not change the default settings in terms of tick rate, the behavior will remain the same.
+* There was a bug sometimes where removing many objects in a single frame would result some objects skipping ticking. That has been solved. 
+* You don't need to use `CM_Tick_GameMode` nor `CM_Tick_GameState` anymore. Those classes don't do anything anymore.
+* You don't need to use the subsystem call `Tick` (Also known as `Tick All Groups`). This function has been deprecated and now the ticking subsystem handles all automatically handled groups (check below).
+* The necessary interface implementation has been significantly thinned out. The following functions have been marked as deprecated:
+	* `SetTick(), SetCanTick(), InitialAdd(), I_Tick_GetOwner()`. This applies for both the blueprint and the C++ _Implementation() overrides.
+
 ----
 
 ## Enabling The Plugin
