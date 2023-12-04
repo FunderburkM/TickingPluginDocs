@@ -15,7 +15,7 @@ On Projects with a very large number of ticking objects, this can result in sign
 - [Locating Plugin Files](#locating-plugin-sample-files)
 - [Plugin Project Settings](#project-settings)
 - [Subsystem Calls](#subsystem-calls)
-- [Ticking Groups)[#ticking-groups)
+- [Ticking Groups)(#ticking-groups)
 	- [Creating and Removing Groups](#ticking-and-removing-ticking-groups)
   	- [Ticking Groups](#ticking-groups)
 - [How it works](#how-it-works)
