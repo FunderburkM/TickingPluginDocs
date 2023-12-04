@@ -10,18 +10,18 @@ On Projects with a very large number of ticking objects, this can result in sign
 
 **Table of Contents** 
 
-- [Update Notes](#update-important-aspects)
-- [Enabling the Plugin](#enabling-the-plugin)
-- [Locating Plugin Files](#locating-plugin-sample-files)
-- [Plugin Project Settings](#project-settings)
-- [Subsystem Calls](#subsystem-calls)
-- [Ticking Groups](#ticking-groups)
-	- [Creating and Removing Groups](#creating-and-removing-ticking-groups)
-  	- [Ticking Each Group](#ticking-each-group)
-- [How it works](#how-it-works)
-	- [C++ Implementation](#how-it-works---cpp-implementation)
-	- [BP Implementation](#how-it-works---bp-implementation)
-	- [Additional Info](#how-it-works---additional-information)
+- [Update Notes](#update-important-aspects)  
+- [Enabling the Plugin](#enabling-the-plugin)  
+- [Locating Plugin Files](#locating-plugin-sample-files)  
+- [Plugin Project Settings](#project-settings)  
+- [Subsystem Calls](#subsystem-calls)  
+- [Ticking Groups](#ticking-groups)  
+	- [Creating and Removing Groups](#creating-and-removing-ticking-groups)  
+  	- [Ticking Each Group](#ticking-each-group)  
+- [How it works](#how-it-works)  
+	- [C++ Implementation](#how-it-works---cpp-implementation)  
+	- [BP Implementation](#how-it-works---bp-implementation)  
+	- [Additional Info](#how-it-works---additional-information)  
 
 ----
 
