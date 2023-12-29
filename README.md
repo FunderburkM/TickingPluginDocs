@@ -6,9 +6,49 @@ Mono Tick, improved!
 
 The Concept of Mono Tick is simple. The Engine's ticking process is very capable, and in its capability lies a decent amount of calculations such as things like Ticking Prerequisites, especial ticking groups, inidividual vs global time dilation, individual ticking rate calculations, event dispatching and solving, etc. Sometimes, we don't need all of these features, and/or we want to handle things a little differently. This is where Mono Tick helps. You can create your own ticking pools, organize and specify ticking rules, and even batch reduce ticking rates.  
 
+## Important 
+
 On Projects with a very large number of ticking objects, this can result in significant performance gains. Keep in mind that your mileage may vary, and results will depend on the nature of the ticking objects, native (C++) vs blueprint ticking, frequencies, build targets, amongst others.  
 
-**Table of Contents** 
+Here's a rough example of the difference you can obtain:  
+
+For reference, at 60fps, 1ms = 7-8 fps. At 120fps, 1ms = 17-19 fps. 
+
+  
+**Setup 1**: 2000 registered tick objects to Mono Tick instead of Engine Tick  
+
+> Tested on Computer with a 7950x and 128gb of ddr5 6000hz ram  
+
+Average Differences:  
+
+* PIE: 3.4ms [Mono Tick] vs 4.9ms [Engine Tick] - Delta: 1.5ms  
+* Standalone: 2.1ms [Mono Tick] vs 3.2ms [Engine Tick] - Delta: 1.1ms  
+* Development Packaged: 1.5ms [Mono Tick] vs 2.3ms [Engine Tick] - Delta: 0.8ms  
+* Shipping Packaged: 1.2ms [Mono Tick] vs 1.8ms [Engine Tick] - Delta: 0.6ms  
+
+**Setup 2**: 2000 registered tick objects to Mono Tick instead of Engine Tick  
+
+> Tested on Computer with a 3700x and 48gb of ddr4 3000hz ram  
+
+Average Differences:  
+
+* PIE: 4.2ms [Mono Tick] vs 5.9ms [Engine Tick] - Delta: 1.7ms  
+* Standalone: 3.6ms [Mono Tick] vs 4.9ms [Engine Tick] - Delta: 1.3ms  
+* Development Packaged: 3.0ms [Mono Tick] vs 4.0ms [Engine Tick] - Delta: 1.0ms  
+* Shipping Packaged: 2.6ms [Mono Tick] vs 3.5ms [Engine Tick] - Delta: 0.9ms  
+
+**Setup 3**: 25000 registered tick objects on Mono Tick instead of Engine Tick  
+> Tested on Computer with a 7950x and 128gb of ddr5 6000hz ram  
+
+* PIE: 39.3ms [Mono Tick] vs 69.7ms [Engine Tick] - Delta: 30ms  
+* Standalone: 14.6ms [Mono Tick] vs 43.5ms [Engine Tick] - Delta: 28.9ms  
+* Development Packaged: 13.0ms [Mono Tick] vs 40.2ms [Engine Tick] - Delta: 27.2 ms  
+* Shipping Packaged: 10.5ms [Mono Tick] vs 36.2ms [Engine Tick] - Delta: 25.7ms  
+
+
+
+
+## Table of Contents
 
 - [Update Notes](#update-important-aspects)  
 - [Enabling the Plugin](#enabling-the-plugin)  
@@ -17,7 +57,7 @@ On Projects with a very large number of ticking objects, this can result in sign
 - [Ticking Groups](#ticking-groups)  
 - [Subsystem Calls](#subsystem-calls)   
 
-**Pages to Explore**  
+## Pages to Explore 
 
 - [Implementation](/Implementation.md) - For how to implement the ticking system in both C++ and Blueprints  
 - [How To](/HowTo.md) - For Example cases when working with the ticking system.  
