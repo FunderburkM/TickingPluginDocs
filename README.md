@@ -15,7 +15,7 @@ Here's a rough example of the difference you can obtain:
 For reference, at 60fps, 1ms = 7-8 fps. At 120fps, 1ms = 17-19 fps. 
 
   
-**Setup 1**: 2000 registered tick objects to Mono Tick instead of Engine Tick  
+**Setup 1**: 2000 Blueprint-derived registered tick objects to Mono Tick instead of Engine Tick  
 
 > Tested on Computer with a 7950x and 128gb of ddr5 6000hz ram  
 
@@ -26,7 +26,7 @@ Average Differences:
 * Development Packaged: 1.5ms [Mono Tick] vs 2.3ms [Engine Tick] - Delta: 0.8ms  
 * Shipping Packaged: 1.2ms [Mono Tick] vs 1.8ms [Engine Tick] - Delta: 0.6ms  
 
-**Setup 2**: 2000 registered tick objects to Mono Tick instead of Engine Tick  
+**Setup 2**: 2000 Blueprint-derived registered tick objects to Mono Tick instead of Engine Tick  
 
 > Tested on Computer with a 3700x and 48gb of ddr4 3000hz ram  
 
@@ -37,7 +37,7 @@ Average Differences:
 * Development Packaged: 3.0ms [Mono Tick] vs 4.0ms [Engine Tick] - Delta: 1.0ms  
 * Shipping Packaged: 2.6ms [Mono Tick] vs 3.5ms [Engine Tick] - Delta: 0.9ms  
 
-**Setup 3**: 25000 registered tick objects on Mono Tick instead of Engine Tick  
+**Setup 3**: 25000 Blueprint-derived registered tick objects on Mono Tick instead of Engine Tick  
 > Tested on Computer with a 7950x and 128gb of ddr5 6000hz ram  
 
 * PIE: 39.3ms [Mono Tick] vs 69.7ms [Engine Tick] - Delta: 30ms  
