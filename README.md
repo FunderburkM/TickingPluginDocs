@@ -1,5 +1,7 @@
 # Mono Tick v1.5  
 
+Mono Tick v1.5 is available for UE5.1 and above. Earlier plugin engine versions will be on 1.1.
+
 Mono Tick, improved!  
 
 [Marketplace Link](https://www.unrealengine.com/marketplace/en-US/product/mono-ticking-plugin)  
