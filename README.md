@@ -4,7 +4,7 @@ Mono Tick, improved!
 
 [Marketplace Link](https://www.unrealengine.com/marketplace/en-US/product/mono-ticking-plugin)  
 
-The Concept of Mono Tick is simple. The Engine's ticking process is very capable, and in its capability lies a decent amount of calculations such as things like Ticking Prerequisites, especial ticking groups, inidividual vs global time dilation, individual ticking rate calculations, event dispatching and solving, etc. Often times, we don't need all of these features, and/or we want to handle things a little differently.  
+The Engine's ticking process is very capable, and in its capability lies a decent amount of calculations such as things like Ticking Prerequisites, especial ticking groups, individual vs global time dilation, individual ticking rate calculations, event dispatching and solving, etc. Often times, we don't need all of this feature processing, we want to bypass them, and/or we want to handle things a little differently.  
 
 This is where Mono Tick shines. Create your own ticking pools, organize and specify ticking rules, and even batch reduce ticking rates. Abstract the ticking process one level above the object, improving cache access and cpu cycling.    
 
