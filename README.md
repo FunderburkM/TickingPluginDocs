@@ -4,7 +4,9 @@ Mono Tick, improved!
 
 [Marketplace Link](https://www.unrealengine.com/marketplace/en-US/product/mono-ticking-plugin)  
 
-The Concept of Mono Tick is simple. The Engine's ticking process is very capable, and in its capability lies a decent amount of calculations such as things like Ticking Prerequisites, especial ticking groups, inidividual vs global time dilation, individual ticking rate calculations, event dispatching and solving, etc. Sometimes, we don't need all of these features, and/or we want to handle things a little differently. This is where Mono Tick helps. You can create your own ticking pools, organize and specify ticking rules, and even batch reduce ticking rates.  
+The Concept of Mono Tick is simple. The Engine's ticking process is very capable, and in its capability lies a decent amount of calculations such as things like Ticking Prerequisites, especial ticking groups, inidividual vs global time dilation, individual ticking rate calculations, event dispatching and solving, etc. Often times, we don't need all of these features, and/or we want to handle things a little differently.  
+
+This is where Mono Tick shines. Create your own ticking pools, organize and specify ticking rules, and even batch reduce ticking rates. Abstract the ticking process one level above the object, improving cache access and cpu cycling.    
 
 ## Important 
 
@@ -88,6 +90,8 @@ Go to the Plugins Tab, and search for the plugin. You will either see it as `CM_
 The Plugin's Friendly name is `Mono Tick`, but its technical name in source code is `CM_Tick_Module`. The name has maintained due to legacy reasons.  
 
 ## Locating Plugin Sample Files  
+
+**The plugin comes with sample content that you can check and test for. This Sample content is not required to be used for the plugin to work but rather serves as a point of reference**.  
 
 Go to Content Folder -> All. It should appear as either `CM_Tick_Module Content` or `Mono Tick Content`. If it doesn't show up after enabling the plugin and restarting the project, check that the correct show option is enabled in the content browser settings panel.  
 
