@@ -1,5 +1,7 @@
 # Implementation
 
+> Important: Check the [Notes Section](/Notes.md#more-about-the-plugin) for information on what is required from an object perspective to be compatible with the plugin.  
+
 The Setup is simple. Implement the `CI_WAdmin_Tick` interface on any object that you wish to tick pooled. Whether it is an actor, a component, a widget, or _any_ Object class.  
 
 ![Image](/Resources/MT_InterfaceSetting.png)  
@@ -19,7 +21,7 @@ FName TickingGroupName
 
 ## BP Implementation  
 
-If you implement the interface at the blueprint level, All you need to do afterwards is the same:  
+If you implement the interface at the blueprint level, All you need to do is this:  
 
 ![image](/Resources/MT_Sample_Register.png)  
 ![image](/Resources/MT_Sample_TickFunction.png)  
