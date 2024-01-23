@@ -14,6 +14,7 @@ This is where Mono Tick shines. Create your own ticking pools, organize and spec
 
 - **IMPORTANT** [Updating from older versions](/UpdatingFromOlderVersions.md)  
 - [Performance and Good to Check Notes](/Notes.md)  
+- [Hotfixes and sub release notes](/HotFixUpdates.md)  
 
 ## Table of Contents
 
